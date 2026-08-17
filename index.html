@@ -3,112 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Портфолио Савченко Вячеслава. Дизайн, разработка и цифровые продукты."
-    />
-    <title>Савченко Вячеслав | Портфолио</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Портфолио Савченко Вячеслава, backend-разработчика и создателя Telegram-ботов." />
+    <title>Савченко Вячеслав | Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="aurora aurora-one"></div>
-    <div class="aurora aurora-two"></div>
-    <main class="page-shell">
-      <nav class="glass navigation" aria-label="Основная навигация">
-        <a class="brand" href="#top" aria-label="На главную">SV<span>.</span></a>
+    <div class="noise"></div>
+    <div class="cursor-glow"></div>
+
+    <main>
+      <nav class="nav wrap">
+        <a class="brand" href="#top" aria-label="На главную">VS<span>;</span></a>
         <div class="nav-links">
+          <a href="#stack">Стек</a>
           <a href="#about">Обо мне</a>
-          <a href="#work">Работы</a>
-          <a href="#contact">Контакты</a>
         </div>
-        <a class="nav-dot" href="#contact" aria-label="Связаться"></a>
+        <a class="nav-contact" href="#contact">Связаться <span>↗</span></a>
       </nav>
 
-      <section class="hero" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> Independent creator</p>
-          <h1>Савченко<br /><em>Вячеслав</em></h1>
-          <p class="intro">
-            Создаю выразительные цифровые решения на стыке дизайна,
-            логики и внимания к деталям.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#contact">Написать мне <b>↗</b></a>
-            <a class="button quiet" href="#work">Смотреть работы</a>
+      <section class="hero wrap" id="top">
+        <div class="eyebrow reveal"><i></i> доступен для проектов</div>
+        <h1 class="hero-title">
+          <span class="reveal">Создаю</span>
+          <span class="hero-line reveal"><em>цифровые</em> вещи</span>
+          <span class="reveal">со смыслом<span class="dot">.</span></span>
+        </h1>
+        <div class="hero-bottom reveal">
+          <p>Fullstack-разработчик. Делаю быстрые API, Telegram-ботов и продукты, которыми приятно пользоваться.</p>
+          <a class="round-link magnetic" href="#contact" aria-label="Перейти к контактам"><span>↓</span></a>
+        </div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-sticker tilt-card"><span>CODE</span><b>+<br />CARE</b></div>
+      </section>
+
+      <section class="marquee-section" aria-label="Направления разработки">
+        <div class="marquee">
+          <div class="marquee-group">BACKEND <span>✳</span> TELEGRAM BOTS <span>✳</span> WEB APPS <span>✳</span> REST API <span>✳</span> BACKEND <span>✳</span> TELEGRAM BOTS <span>✳</span> WEB APPS <span>✳</span> REST API <span>✳</span></div>
+          <div class="marquee-group" aria-hidden="true">BACKEND <span>✳</span> TELEGRAM BOTS <span>✳</span> WEB APPS <span>✳</span> REST API <span>✳</span> BACKEND <span>✳</span> TELEGRAM BOTS <span>✳</span> WEB APPS <span>✳</span> REST API <span>✳</span></div>
+        </div>
+      </section>
+
+      <section class="stack-section wrap" id="stack">
+        <div class="section-label reveal"><span>01</span> технологии</div>
+        <div class="stack-intro reveal">
+          <h2>Инструменты,<br />которым <em>доверяю.</em></h2>
+          <p>От идеи до готового сервиса: продумываю архитектуру, пишу чистый код, подключаю базы и разворачиваю приложение.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card skill-main reveal tilt-card"><span class="skill-index">01 / backend</span><div class="skill-icon">Py</div><h3>Python</h3><p>FastAPI · Aiogram<br />REST API · JWT</p><span class="skill-arrow">↗</span></article>
+          <article class="skill-card warm reveal tilt-card"><span class="skill-index">02 / data</span><div class="skill-icon">DB</div><h3>Базы данных</h3><p>PostgreSQL<br />SQLite</p><span class="skill-arrow">↗</span></article>
+          <article class="skill-card dark reveal tilt-card"><span class="skill-index">03 / frontend</span><div class="skill-icon">&lt;/&gt;</div><h3>Интерфейсы</h3><p>React · TypeScript<br />Vite · HTML/CSS/JS</p><span class="skill-arrow">↗</span></article>
+          <article class="skill-card lime reveal tilt-card"><span class="skill-index">04 / delivery</span><div class="skill-icon">DK</div><h3>Доставка</h3><p>Docker<br />Интеграции</p><span class="skill-arrow">↗</span></article>
+        </div>
+      </section>
+
+      <section class="about-section wrap" id="about">
+        <div class="section-label reveal"><span>02</span> подход</div>
+        <div class="about-grid">
+          <div class="about-copy reveal"><h2>Хороший код<br />не должен быть<br /><em>шумным.</em></h2></div>
+          <div class="about-note reveal tilt-card">
+            <span class="quote-mark">“</span>
+            <p>Если твой код работает, значит это хороший код.</p>
+            <div class="signature"><span>Маркус Перссон</span><i></i></div>
           </div>
         </div>
+        <div class="principles">
+          <div class="principle reveal"><b>01</b><p>Понятная архитектура</p></div>
+          <div class="principle reveal"><b>02</b><p>Быстрая коммуникация</p></div>
+          <div class="principle reveal"><b>03</b><p>Результат, не процесс</p></div>
+        </div>
+      </section>
 
-        <div class="hero-art" aria-label="Декоративная композиция">
-          <div class="orbit orbit-large"></div>
-          <div class="orbit orbit-small"></div>
-          <div class="glass portrait-card">
-            <div class="portrait-mark">SV</div>
-            <p>digital<br />craft</p>
+      <section class="contact-section" id="contact">
+        <div class="contact-shape shape-one"></div><div class="contact-shape shape-two"></div>
+        <div class="wrap contact-content">
+          <div class="section-label reveal"><span>03</span> контакты</div>
+          <h2 class="reveal">Есть идея?<br /><em>Давайте сделаем.</em></h2>
+          <a class="email-link reveal magnetic" href="mailto:vacheslavsavchenko913@gmail.com">vacheslavsavchenko913@gmail.com <span>↗</span></a>
+          <div class="contact-footer reveal">
+            <p><i></i> Обычно отвечаю в течение часа</p>
+            <div class="socials"><a href="https://t.me/polzovatel_telegrama01" target="_blank" rel="noreferrer">Telegram <span>↗</span></a><a href="https://discord.com/users/polzovatel_01" target="_blank" rel="noreferrer">Discord <span>↗</span></a><a href="https://github.com/jsprogrammer-creator" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></div>
           </div>
-          <div class="glass availability"><i></i> открыт к проектам</div>
-          <div class="floating-type">01<br /><span>portfolio</span></div>
         </div>
       </section>
-
-      <section class="glass about" id="about">
-        <p class="section-label">01 / ПОДХОД</p>
-        <div>
-          <h2>Идея должна быть<br />не только <em>красивой.</em></h2>
-          <p>
-            Работаю с задачами от первого наброска до готового результата.
-            Люблю ясные интерфейсы, смелую типографику и решения, которыми
-            удобно пользоваться каждый день.
-          </p>
-        </div>
-        <div class="skills" aria-label="Навыки">
-          <span>Python</span><span>FastAPI</span><span>aiogram</span><span>SQLite</span>
-          <span>PostgreSQL</span><span>Docker</span><span>HTML / CSS / JS</span>
-          <span>React</span><span>TypeScript</span><span>Vite</span>
-          <span>Telegram bots</span><span>REST API</span><span>JWT-авторизация</span>
-        </div>
-      </section>
-
-      <section class="works" id="work">
-        <div class="section-heading">
-          <p class="section-label">02 / ВЫБРАННОЕ</p>
-          <h2>Проекты<br /><em>в процессе.</em></h2>
-          <p class="works-note">Здесь скоро появятся кейсы и новые работы.</p>
-        </div>
-        <div class="work-grid">
-          <article class="glass work-card work-card-main">
-            <span class="card-number">01</span>
-            <div class="card-orb"></div>
-            <div>
-              <p>СКОРО</p>
-              <h3>Новый проект</h3>
-            </div>
-          </article>
-          <article class="glass work-card work-card-side">
-            <span class="card-number">02</span>
-            <div class="lines"></div>
-            <div>
-              <p>СКОРО</p>
-              <h3>Новая история</h3>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <footer class="glass contact" id="contact">
-        <p class="section-label">03 / КОНТАКТЫ</p>
-        <div class="contact-main">
-          <h2>Есть идея?<br /><em>Давайте обсудим.</em></h2>
-          <a class="button primary" href="https://t.me/polzovatel_telegrama01" target="_blank" rel="noreferrer">Написать в Telegram <b>↗</b></a>
-        </div>
-        <div class="contact-links">
-           <a href="https://t.me/polzovatel_telegrama01" target="_blank" rel="noreferrer"><span>Telegram</span><b>polzovatel_telegrama01</b></a>
-           <a href="https://discord.com/users/polzovatel_01" target="_blank" rel="noreferrer"><span>Discord</span><b>polzovatel_01</b></a>
-           <a href="https://github.com/jsprogrammer-creator" target="_blank" rel="noreferrer"><span>GitHub</span><b>jsprogrammer-creator</b></a>
-           <a href="mailto:vacheslavsavchenko913@gmail.com"><span>Почта</span><b>vacheslavsavchenko913@gmail.com</b></a>
-        </div>
-        <p class="reply-time">Обычно отвечаю в течение часа.</p>
-        <p class="copyright">© 2026 SAVCHENKO VYACHESLAV</p>
-      </footer>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
