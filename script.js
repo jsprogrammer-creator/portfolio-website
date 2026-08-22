@@ -2,7 +2,9 @@ const revealItems = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    setTimeout(() => { entry.target.style.transitionDelay = ''; }, 1000);
   });
 }, { threshold: 0.14 });
 
@@ -35,6 +37,13 @@ document.fonts.ready.then(() => {
 });
 
 document.querySelectorAll('.tilt-card').forEach((card) => {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  card.addEventListener('pointerenter', (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - .5;
+    const y = (event.clientY - rect.top) / rect.height - .5;
+    card.style.transform = `perspective(700px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg) translateY(-7px)`;
+  });
   card.addEventListener('pointermove', (event) => {
     if (window.matchMedia('(pointer: coarse)').matches) return;
     const rect = card.getBoundingClientRect();
